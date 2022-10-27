@@ -14,13 +14,13 @@ public class ArrayDequeCreator extends PriorityQueue<String> {
         arrDeq.add(secondQueue.remove());
 
         while(!firstQueue.isEmpty() && !secondQueue.isEmpty()){
-            firstQueue.add(arrDeq.pollFirst());
-            arrDeq.add(firstQueue.remove());
-            arrDeq.add(firstQueue.remove());
+            firstQueue.add(arrDeq.removeLast());
+            arrDeq.addLast(firstQueue.remove());
+            arrDeq.addLast(firstQueue.remove());
 
-            secondQueue.add(arrDeq.pollFirst());
-            arrDeq.add(secondQueue.remove());
-            arrDeq.add(secondQueue.remove());
+            secondQueue.add(arrDeq.removeLast());
+            arrDeq.addLast(secondQueue.remove());
+            arrDeq.addLast(secondQueue.remove());
 
         }
 
